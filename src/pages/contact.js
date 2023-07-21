@@ -1,4 +1,5 @@
 import React from "react";
+import "./contact.css";
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -14,10 +15,10 @@ const handleSubmit = (e) => {
 
 export default function contact() {
   return (
-    <div>
+    <div className="container">
       <h2>Contact</h2>
       <p>Contact me here...</p>
-      <form onSubmit={handleSubmit}>
+      <form className="contact-form" onSubmit={handleSubmit}>
         <label htmlFor="name" className="contact-label">
           Name
         </label>
