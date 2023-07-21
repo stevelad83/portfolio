@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div>
-        <nav>
+        <nav className="navbar">
           <ul>
             <li>
               <Link to="/">Home</Link>
