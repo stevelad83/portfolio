@@ -36,3 +36,5 @@ export default function about() {
     </div>
   );
 }
+
+//world map with travel animation?
