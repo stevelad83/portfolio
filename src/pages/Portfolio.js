@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "../Components/ProjectCard.js";
-import projects from "../data/projects.js";
+import projects from "../data/projectData.js";
 
 export default function Portfolio() {
   return (
