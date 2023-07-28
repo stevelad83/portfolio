@@ -20,14 +20,16 @@ const ProjectCard = ({ project }) => {
   const { title, description, image, link } = project;
 
   return (
-    <div className="project-card">
+    <a
+      className="project-card"
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img src={image} alt={title} />
       <h3>{title}</h3>
       <p>{description}</p>
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        View Project
-      </a>
-    </div>
+    </a>
   );
 };
 

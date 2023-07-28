@@ -6,6 +6,7 @@ import Contact from "./Pages/Contact.js";
 import Portfolio from "./Pages/Portfolio.js";
 import Home from "./Pages/Home.js";
 import Navbar from "./Components/Navbar.js";
+import Footer from "./Components/Footer.js";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/projects" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
