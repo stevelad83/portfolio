@@ -40,3 +40,10 @@
   color: #007bff;
   text-decoration: none;
 }
+
+.project-card img {
+  height: 100px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}

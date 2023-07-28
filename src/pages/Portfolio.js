@@ -2,7 +2,6 @@ import React from "react";
 import ProjectCard from "../Components/ProjectCard.js";
 import projects from "../data/projectData.js";
 import "./portfolio.css";
-import "../images/photo.jpeg";
 
 export default function Portfolio() {
   return (
