@@ -2,10 +2,14 @@
   background-color: #f0f0f0;
   padding: 16px;
   text-align: center;
-  position: fixed;
+  position: relative;
+  top: 50px;
   left: 0;
   bottom: 0;
   width: 100%;
-  /* padding: 16px;
-  min-height: 60px; */
+  z-index: 1;
+}
+
+.footer p {
+  margin: 5px;
 }
