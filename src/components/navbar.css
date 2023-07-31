@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  margin: 0 15px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar li:hover {
+  color: #9575cd;
+  transform: scale(1.2);
+}
+
+.navbar li a:hover {
+  color: #9575cd;
+  transform: scale(1.2);
+}
