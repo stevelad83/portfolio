@@ -7,6 +7,14 @@
   text-align: center;
   width: 250px;
   margin: 16px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.1);
+  border-color: #9575cd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .project-card h3 {

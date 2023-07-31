@@ -16,8 +16,8 @@ const projects = [
   {
     id: 3,
     title: "Under the Sea",
-    description: "test description",
-    image: require("../assets/images/notes.gif"),
+    description: "Learn to play 'Under the Sea' on marimba! ",
+    image: require("../assets/images/underwater.gif"),
     link: "https://ornate-pavlova-7e794e.netlify.app/",
   },
   {
