@@ -2,8 +2,11 @@
   background-color: #f0f0f0;
   padding: 16px;
   text-align: center;
-  position: relative;
+  /* position: relative;
   top: 50px;
+  would like to figure out how to send footer to back whilst keeping it at the bottom of the page*/
+
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
