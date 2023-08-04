@@ -5,9 +5,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <p>
-        &copy; {new Date().getFullYear()} Steven Bryant. All rights reserved
-      </p>
-      <p>
+        &copy; {new Date().getFullYear()} Steven Bryant. All rights reserved.
         Illustrations courtesy of{" "}
         <a href="https://icons8.com/illustrations">Ouch!</a> <br></br>
         GIF by{" "}

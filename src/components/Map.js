@@ -58,9 +58,91 @@ const mapData = {
   FR: 100000,
   US: 100000,
 };
-// const handleClick = (e, countryCode) => {
-//   console.log(countryCode);
+// // const handleClick = (e, countryCode) => {
+// //   console.log(countryCode);
+// // };
+// const Map = () => {
+//   const [dynamicMapData, setDynamicMapData] = useState({});
+//   const [effectCompleted, setEffectCompleted] = useState(false);
+
+//   useEffect(() => {
+//     Object.entries(mapData).forEach(([key, val], idx) => {
+//       setTimeout(
+//         function (k, v) {
+//           setDynamicMapData((old) => {
+//             return {
+//               ...old,
+//               [k]: v,
+//             };
+//           });
+//           if (idx === Object.keys(mapData).length - 1) {
+//             setEffectCompleted(true);
+//           }
+//         },
+//         idx * 300,
+//         key,
+//         val
+//       );
+//     });
+//   }, []);
+
+//   const handleRegionTipShow = (e, el, code) => {
+//     if (effectCompleted) {
+//       // Only apply hover behavior if the useEffect is completed
+//       // Your hover behavior logic here
+//       console.log("Hovered on:", code);
+//     } else {
+//       e.preventDefault(); // Prevents the default tooltip from showing while useEffect is running
+//     }
+//   };
+
+//   return (
+//     <div className="map-container">
+//       <VectorMap
+//         map={"world_mill"}
+//         backgroundColor="#0077be"
+//         zoomOnScroll={false}
+//         containerStyle={{
+//           width: "80%",
+//           margin: "auto",
+//           height: "520px",
+//           padding: "0px",
+//         }}
+//         // onRegionClick={(e, code) => handleClick(e, code)} //gets the country code
+//         onRegionTipShow={handleRegionTipShow} // containerClassName="map"
+//         regionStyle={{
+//           initial: {
+//             fill: "#e4e4e4",
+//             "fill-opacity": 0.9,
+//             stroke: "none",
+//             "stroke-width": 0,
+//             "stroke-opacity": 0,
+//           },
+//           hover: {
+//             "fill-opacity": 0.8,
+//             cursor: "pointer",
+//           },
+//           selected: {
+//             fill: "#2938bc", //color for the clicked country
+//           },
+//           selectedHover: {},
+//         }}
+//         regionsSelectable={true}
+//         series={{
+//           regions: [
+//             {
+//               values: dynamicMapData, //this is your data
+//               scale: ["#146804", "#ff0000"], //your color game's here
+//               normalizeFunction: "polynomial",
+//             },
+//           ],
+//         }}
+//       />
+//     </div>
+//   );
 // };
+// export default Map;
+
 const Map = () => {
   const [dynamicMapData, setDynamicMapData] = useState({});
   const [effectCompleted, setEffectCompleted] = useState(false);
@@ -88,57 +170,45 @@ const Map = () => {
 
   const handleRegionTipShow = (e, el, code) => {
     if (effectCompleted) {
-      // Only apply hover behavior if the useEffect is completed
-      // Your hover behavior logic here
       console.log("Hovered on:", code);
     } else {
-      e.preventDefault(); // Prevents the default tooltip from showing while useEffect is running
+      e.preventDefault();
     }
   };
 
   return (
     <div className="map-container">
-      <VectorMap
-        map={"world_mill"}
-        backgroundColor="#0077be"
-        zoomOnScroll={false}
-        containerStyle={{
-          width: "80%",
-          margin: "auto",
-          height: "520px",
-          padding: "25px",
-        }}
-        // onRegionClick={(e, code) => handleClick(e, code)} //gets the country code
-        onRegionTipShow={handleRegionTipShow} // containerClassName="map"
-        regionStyle={{
-          initial: {
-            fill: "#e4e4e4",
-            "fill-opacity": 0.9,
-            stroke: "none",
-            "stroke-width": 0,
-            "stroke-opacity": 0,
-          },
-          hover: {
-            "fill-opacity": 0.8,
-            cursor: "pointer",
-          },
-          selected: {
-            fill: "#2938bc", //color for the clicked country
-          },
-          selectedHover: {},
-        }}
-        regionsSelectable={true}
-        series={{
-          regions: [
+      <div className="map-aspect-ratio">
+        <VectorMap
+          map={"world_mill"}
+          backgroundColor="#0077be"
+          zoomOnScroll={false}
+          containerStyle={{
+            width: "100%",
+            height: "100%",
+            padding: "0px",
+          }}
+          onRegionTipShow={handleRegionTipShow}
+          regionStyle={
             {
-              values: dynamicMapData, //this is your data
-              scale: ["#146804", "#ff0000"], //your color game's here
-              normalizeFunction: "polynomial",
-            },
-          ],
-        }}
-      />
+              // Your region style properties here
+            }
+          }
+          regionsSelectable={true}
+          series={{
+            regions: [
+              {
+                values: dynamicMapData,
+                scale: ["#146804", "#ff0000"],
+                normalizeFunction: "polynomial",
+              },
+            ],
+          }}
+          zoomButtons={false}
+        />
+      </div>
     </div>
   );
 };
+
 export default Map;

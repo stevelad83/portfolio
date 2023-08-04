@@ -27,17 +27,16 @@ export default function about() {
             rel="noopener noreferrer"
           >
             {" "}
-            the University of Leeds.{" "}
+            the University of Leeds
           </a>
-        </p>
-        <p>
-          When I'm not writing code, you will find me hunting antiques, cooking,
-          meditating, or exploring new places with my wife, daughters, cats and
-          guitar.{" "}
+          . When I'm not writing code, you will find me hunting antiques,
+          cooking, meditating, or exploring new places with my wife, daughters,
+          cats and guitar. See the places I've been on the map below.{" "}
         </p>
       </div>
-      10
-      <Map />
+      <div className="map-div">
+        <Map />
+      </div>
     </>
   );
 }

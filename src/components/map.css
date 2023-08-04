@@ -1,19 +1,58 @@
+/* .map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0077be;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 120px;
+  border-radius: 75%;
+  overflow: hidden;
+  width: 75%;
+  aspect-ratio: 2/1;
+}
+
+.map-container svg {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map {
+  height: 520px;
+} */
 .map-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-
-  height: 520px;
-  padding: 25px;
-
+  background-color: #0077be;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 120px;
+  border-radius: 75%;
+  overflow: hidden;
+  width: 75%;
 }
 
-.map-container svg {
-  border-collapse: separate;
-  display: block;
-  margin: 0;
-  padding: 0;
+.map-aspect-ratio {
+  position: relative;
   width: 100%;
+  padding-top: 50%; /* 2:1 Aspect Ratio */
+}
+
+.map-aspect-ratio .jvectormap-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map-aspect-ratio .jvectormap-container svg {
+  width: 100%;
+  height: 100%;
 }
